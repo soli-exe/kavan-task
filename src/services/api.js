@@ -19,12 +19,3 @@ export const authLogin = async (username, password) => {
         return response.data
     }
 }
-
-export const getPronivce = async (token) => {
-    const response = await axios.get(`${BASE_URL}/agency/getProvince`,
-        {
-            headers: { 'Authorization': `Bearer ${token}` }
-        }
-    );
-    return response.data;
-}
