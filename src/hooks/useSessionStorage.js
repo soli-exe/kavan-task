@@ -7,7 +7,7 @@ export const useSessionStorage = () => {
 
     const setData = (key, value) => {
         if (typeof window !== 'undefined' && window.sessionStorage) {
-            const storedPrefs = window.sessionStorage.getItem('token-access');
+            const storedPrefs = window.sessionStorage.getItem(key);
             if (storedPrefs && typeof storedPrefs === 'string') {
                 return storedPrefs;
             } else {
